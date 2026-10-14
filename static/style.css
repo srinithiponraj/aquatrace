@@ -1,0 +1,479 @@
+/* AquaTrace — AI-Powered Satellite Lake Intelligence
+   Theme: Clean, Bright, Professional Light Theme with Subtle 3D Visual Depth
+   Palette: Crisp White, Light Slate, Ocean Blue, Cyan, and Teal Accents
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-app: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fcfdfe;
+  --bg-sidebar: #ffffff;
+  --bg-subtle: #f0f7ff;
+  
+  --border-subtle: #e2e8f0;
+  --border-card: #cbd5e1;
+  --border-glow: rgba(2, 132, 199, 0.25);
+  --border-focus: #0284c7;
+  
+  --text-main: #0f172a;
+  --text-muted: #334155;
+  --text-dim: #64748b;
+  
+  --cyan-primary: #0891b2;
+  --blue-primary: #0284c7;
+  --blue-dark: #0369a1;
+  --teal-accent: #0d9488;
+  --emerald-success: #059669;
+  --amber-warning: #d97706;
+  --rose-danger: #e11d48;
+  --purple-accent: #7c3aed;
+
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+
+  /* 3D Visual Depth Shadows */
+  --shadow-3d-card: 0 4px 16px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --shadow-3d-hover: 0 10px 28px -3px rgba(2, 132, 199, 0.14), 0 2px 6px rgba(15, 23, 42, 0.05), inset 0 1px 0 rgba(255, 255, 255, 1.0);
+  --shadow-3d-button: 0 4px 14px rgba(2, 132, 199, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  --shadow-sm: 0 1px 4px rgba(15, 23, 42, 0.06);
+}
+
+/* Global Application Background — Clean Bright Light Surface */
+html, body, [data-testid="stAppViewContainer"] {
+  background-color: var(--bg-app) !important;
+  color: var(--text-main) !important;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+[data-testid="stHeader"] {
+  background: rgba(248, 250, 252, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+/* Sidebar Custom Styling — Crisp Clean White */
+[data-testid="stSidebar"] {
+  background-color: var(--bg-sidebar) !important;
+  border-right: 1.5px solid var(--border-subtle) !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stSidebarUserContent"] {
+  padding-top: 1.2rem;
+}
+
+[data-testid="stSidebar"] hr {
+  border-color: var(--border-subtle) !important;
+}
+
+/* Brand Banner in Sidebar */
+.brand-container {
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: var(--radius-md);
+  border: 1px solid #bae6fd;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 12px;
+}
+
+.brand-logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0284c7, #06b6d4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.brand-text h1 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+  color: #0369a1 !important;
+  letter-spacing: -0.5px;
+}
+
+.brand-text p {
+  font-size: 11px;
+  color: #0891b2;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+/* Hero Top Bar Banner — 3D Clean Light Header */
+.topbar-hero {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #f0fdfa 100%);
+  border: 1.5px solid #bae6fd;
+  border-radius: var(--radius-lg);
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow-3d-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.topbar-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0284c7, #06b6d4, #0d9488);
+}
+
+/* Workflow Step Progress Stepper */
+.workflow-stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-3d-card);
+  overflow-x: auto;
+}
+
+.step-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.step-pill.active {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  color: #0369a1 !important;
+  border: 1.5px solid #0284c7;
+  box-shadow: 0 2px 10px rgba(2, 132, 199, 0.2);
+  transform: translateY(-1px);
+}
+
+.step-pill.completed {
+  background: #ecfdf5;
+  color: #065f46 !important;
+  border: 1px solid #a7f3d0;
+}
+
+.step-pill.pending {
+  background: #f8fafc;
+  color: var(--text-dim) !important;
+  border: 1px solid #e2e8f0;
+}
+
+.step-pill .step-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.step-pill.active .step-num {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+.step-pill.completed .step-num {
+  background: #059669;
+  color: #ffffff;
+}
+
+.step-pill.pending .step-num {
+  background: #e2e8f0;
+  color: var(--text-dim);
+}
+
+/* Water Body Type Badges */
+.badge-lake {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.badge-reservoir {
+  background: #cffafe;
+  color: #0e7490;
+  border: 1px solid #a5f3fc;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.badge-pond {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.badge-tank {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.badge-lagoon {
+  background: #f3e8ff;
+  color: #7e22ce;
+  border: 1px solid #e9d5ff;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.badge-unverified {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badge-live-stac {
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+  color: #047857;
+  border: 1px solid #6ee7b7;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 0 1px 4px rgba(5, 150, 105, 0.15);
+}
+
+.badge-demo-data {
+  background: #fff1f2;
+  color: #be123c;
+  border: 1px solid #fecdd3;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* Distinct Alert Banners (Red, Yellow, Green, Insufficient Data) */
+.flag-banner-green {
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+  border: 1.5px solid #10b981;
+  border-left: 6px solid #059669;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  color: #065f46;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.flag-banner-yellow {
+  background: linear-gradient(135deg, #fffbeb 0%, #fefce8 100%);
+  border: 1.5px solid #f59e0b;
+  border-left: 6px solid #d97706;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  color: #92400e;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.flag-banner-red {
+  background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%);
+  border: 1.5px solid #f43f5e;
+  border-left: 6px solid #e11d48;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  color: #9f1239;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.flag-banner-insufficient {
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+  border: 1.5px solid #818cf8;
+  border-left: 6px solid #6366f1;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  color: #4338ca;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Native Containers with 3D Depth Card Effect */
+div[data-testid="stVerticalBlock"] > div[data-testid="stVerticalBlockBorderWrapper"] {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-3d-card) !important;
+  transition: all 0.25s ease !important;
+}
+
+div[data-testid="stVerticalBlock"] > div[data-testid="stVerticalBlockBorderWrapper"]:hover {
+  border-color: #bae6fd !important;
+  box-shadow: var(--shadow-3d-hover) !important;
+}
+
+/* Metric Display Optimization — High Contrast Light Presentation */
+[data-testid="stMetric"] {
+  background: transparent !important;
+}
+
+[data-testid="stMetricLabel"] {
+  color: var(--text-dim) !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+}
+
+[data-testid="stMetricValue"] {
+  color: var(--text-main) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 800 !important;
+  font-size: 26px !important;
+}
+
+/* 3D Action Buttons Styling */
+button[kind="primary"] {
+  background: linear-gradient(135deg, #0284c7 0%, #0891b2 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border: none !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-3d-button) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+button[kind="primary"]:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #0e7490 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+button[kind="secondary"] {
+  background: #ffffff !important;
+  color: var(--text-main) !important;
+  border: 1.5px solid var(--border-card) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.2s ease !important;
+}
+
+button[kind="secondary"]:hover {
+  background: #f0f9ff !important;
+  border-color: #0284c7 !important;
+  color: #0284c7 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Tabs Styling — Modern Light Navigation */
+[data-testid="stTabs"] [data-baseweb="tab-list"] {
+  background-color: #f1f5f9 !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 4px 6px !important;
+  gap: 6px !important;
+}
+
+[data-testid="stTabs"] [data-baseweb="tab"] {
+  border-radius: var(--radius-sm) !important;
+  color: var(--text-dim) !important;
+  font-weight: 600 !important;
+  padding: 8px 16px !important;
+  transition: all 0.2s ease !important;
+}
+
+[data-testid="stTabs"] [data-baseweb="tab"][aria-selected="true"] {
+  background: #ffffff !important;
+  color: #0284c7 !important;
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Form Inputs, Datepickers, and Select Boxes */
+input[type="text"], input[type="number"], [data-baseweb="select"] > div, [data-testid="stDateInput"] input {
+  background-color: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: var(--radius-sm) !important;
+  color: #0f172a !important;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, [data-baseweb="select"] > div:focus-within {
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.2) !important;
+}
+
+/* Dataframe & Table Modern Skin */
+[data-testid="stDataFrame"] {
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-md) !important;
+  overflow: hidden !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+/* Code and Pre Blocks */
+pre, code {
+  background-color: #f1f5f9 !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: #0369a1 !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Scrollbar Sleek Styling */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}

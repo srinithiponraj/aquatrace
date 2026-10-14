@@ -1,0 +1,27 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Bellandur Lake",
+    "country": "India",
+    "region": "Karnataka, Bengaluru",
+    "description": "Urban lake affected by severe nutrient influx, industrial discharges, and surface algal foam.",
+    "typical_area_km2": 3.65
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [77.6535, 12.9392],
+        [77.6620, 12.9421],
+        [77.6712, 12.9435],
+        [77.6805, 12.9410],
+        [77.6882, 12.9340],
+        [77.6841, 12.9275],
+        [77.6750, 12.9250],
+        [77.6660, 12.9280],
+        [77.6580, 12.9320],
+        [77.6535, 12.9392]
+      ]
+    ]
+  }
+}

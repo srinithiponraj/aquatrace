@@ -1,0 +1,25 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Lake Urmia",
+    "country": "Iran",
+    "region": "West Azerbaijan",
+    "description": "Endorheic salt lake undergoing critical desiccation, shoreline contraction, and halophilic algal pigment shifts.",
+    "typical_area_km2": 2100.0
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [45.100, 37.400],
+        [45.150, 37.750],
+        [45.300, 38.000],
+        [45.550, 37.950],
+        [45.750, 37.600],
+        [45.600, 37.250],
+        [45.350, 37.150],
+        [45.100, 37.400]
+      ]
+    ]
+  }
+}

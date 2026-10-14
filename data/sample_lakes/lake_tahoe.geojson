@@ -1,0 +1,26 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Lake Tahoe",
+    "country": "United States",
+    "region": "California / Nevada",
+    "description": "High-altitude oligotrophic freshwater lake known for clarity, monitored for shoreline sediment runoff and turbidity changes.",
+    "typical_area_km2": 490.0
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-120.150, 39.000],
+        [-120.180, 39.120],
+        [-120.120, 39.240],
+        [-120.000, 39.270],
+        [-119.950, 39.160],
+        [-119.940, 38.980],
+        [-120.020, 38.920],
+        [-120.100, 38.940],
+        [-120.150, 39.000]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Lake Mead (Boulder Basin)",
+    "country": "United States",
+    "region": "Nevada / Arizona",
+    "description": "Critical reservoir on the Colorado River experiencing documented multi-decadal water level and surface area fluctuations.",
+    "typical_area_km2": 185.0
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-114.780, 36.010],
+        [-114.720, 36.060],
+        [-114.650, 36.120],
+        [-114.540, 36.180],
+        [-114.420, 36.150],
+        [-114.380, 36.080],
+        [-114.480, 36.020],
+        [-114.600, 35.980],
+        [-114.720, 35.970],
+        [-114.780, 36.010]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.env
+
+# SQLite & Cache
+*.db
+aquatrace.db
+data/cache/
+data/reports/*.pdf
+
+# IDE
+.vscode/
+.idea/
+*.swp
